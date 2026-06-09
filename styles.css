@@ -7,7 +7,7 @@
   --surface: rgba(12, 24, 38, 0.78);
   --surface-solid: #101d2b;
   --line: rgba(127, 232, 255, 0.16);
-  --accent: #00e5ff;
+  --accent: #192e30;
   --accent-strong: #5df2ff;
   --coral: #ff4fd8;
   --gold: #f7d35d;
@@ -29,12 +29,12 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    linear-gradient(rgba(79, 214, 230, 0.115) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(79, 214, 230, 0.115) 1px, transparent 1px),
-    radial-gradient(circle at 12% 18%, rgba(0, 210, 225, 0.22), transparent 28%),
-    radial-gradient(circle at 78% 24%, rgba(102, 63, 185, 0.18), transparent 34%),
-    radial-gradient(circle at 85% 64%, rgba(255, 79, 216, 0.13), transparent 34%),
-    linear-gradient(105deg, #020911 0%, #06111c 36%, #100c21 68%, #060615 100%);
+    linear-gradient(rgba(79, 214, 230, 0.105) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 214, 230, 0.105) 1px, transparent 1px),
+    radial-gradient(circle at 12% 18%, rgba(0, 210, 225, 0.15), transparent 28%),
+    radial-gradient(circle at 78% 24%, rgba(102, 63, 185, 0.13), transparent 34%),
+    radial-gradient(circle at 85% 64%, rgba(255, 79, 216, 0.09), transparent 34%),
+    linear-gradient(105deg, #01050a 0%, #030b13 36%, #090719 68%, #03030c 100%);
   background-size: 96px 96px, 96px 96px, auto, auto, auto, auto;
   background-attachment: fixed;
   color: var(--ink);
@@ -63,8 +63,8 @@ body::after {
   pointer-events: none;
   content: "";
   background:
-    linear-gradient(90deg, rgba(1, 8, 15, 0.64), transparent 45%, rgba(4, 4, 18, 0.68)),
-    linear-gradient(180deg, rgba(0, 229, 255, 0.035), transparent 35%, rgba(255, 79, 216, 0.035));
+    linear-gradient(90deg, rgba(1, 6, 12, 0.78), rgba(1, 6, 12, 0.18) 45%, rgba(3, 3, 13, 0.82)),
+    linear-gradient(180deg, rgba(0, 229, 255, 0.025), transparent 35%, rgba(255, 79, 216, 0.025));
   animation: ambientPulse 8s ease-in-out infinite alternate;
 }
 
