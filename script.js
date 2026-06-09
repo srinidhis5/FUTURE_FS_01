@@ -61,7 +61,9 @@ revealItems.forEach((item) => revealObserver.observe(item));
 
 resumeDownload.addEventListener("click", async (event) => {
   event.preventDefault();
-  const resumeUrl = resumeDownload.getAttribute("href");
+  const resumeUrl = resumeDownload.dataset.resumeUrl;
+  const originalText = resumeDownload.textContent;
+  resumeDownload.textContent = "Preparing Download...";
 
   try {
     const response = await fetch(resumeUrl);
@@ -69,18 +71,22 @@ resumeDownload.addEventListener("click", async (event) => {
       throw new Error("Resume file could not be loaded.");
     }
 
-    const resumeBlob = await response.blob();
+    const fileBlob = await response.blob();
+    const resumeBlob = new Blob([fileBlob], { type: "application/pdf" });
     const downloadUrl = URL.createObjectURL(resumeBlob);
     const downloadLink = document.createElement("a");
 
     downloadLink.href = downloadUrl;
     downloadLink.download = "Srinidhi_Sridhar_Resume.pdf";
+    downloadLink.style.display = "none";
     document.body.appendChild(downloadLink);
     downloadLink.click();
     downloadLink.remove();
-    URL.revokeObjectURL(downloadUrl);
+    window.setTimeout(() => URL.revokeObjectURL(downloadUrl), 1200);
   } catch (error) {
-    window.location.href = resumeUrl;
+    alert("Resume download failed. Please try again after refreshing the page.");
+  } finally {
+    resumeDownload.textContent = originalText;
   }
 });
 
