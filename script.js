@@ -3,7 +3,6 @@ const siteNav = document.querySelector(".site-nav");
 const contactForm = document.querySelector("#contactForm");
 const formStatus = document.querySelector(".form-status");
 const revealItems = document.querySelectorAll(".reveal");
-const resumeDownload = document.querySelector("#resumeDownload");
 const cursorDot = document.createElement("span");
 const cursorRing = document.createElement("span");
 
@@ -58,31 +57,6 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
-
-resumeDownload.addEventListener("click", async (event) => {
-  event.preventDefault();
-  const resumeUrl = resumeDownload.getAttribute("href");
-
-  try {
-    const response = await fetch(resumeUrl);
-    if (!response.ok) {
-      throw new Error("Resume file could not be loaded.");
-    }
-
-    const resumeBlob = await response.blob();
-    const downloadUrl = URL.createObjectURL(resumeBlob);
-    const downloadLink = document.createElement("a");
-
-    downloadLink.href = downloadUrl;
-    downloadLink.download = "Srinidhi_Sridhar_Resume.pdf";
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    downloadLink.remove();
-    URL.revokeObjectURL(downloadUrl);
-  } catch (error) {
-    window.location.href = resumeUrl;
-  }
-});
 
 let cursorX = 0;
 let cursorY = 0;
