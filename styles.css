@@ -29,12 +29,12 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    linear-gradient(rgba(0, 229, 255, 0.22) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 255, 0.22) 1px, transparent 1px),
-    radial-gradient(circle at 16% 24%, rgba(0, 229, 255, 0.16), transparent 22%),
-    radial-gradient(circle at 76% 18%, rgba(154, 124, 255, 0.19), transparent 26%),
-    radial-gradient(circle at 86% 68%, rgba(255, 79, 216, 0.14), transparent 30%),
-    linear-gradient(105deg, #000103 0%, #00040a 38%, #03030d 68%, #000104 100%);
+    linear-gradient(rgba(0, 229, 255, 0.32) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.32) 1px, transparent 1px),
+    radial-gradient(circle at 16% 24%, rgba(0, 229, 255, 0.26), transparent 24%),
+    radial-gradient(circle at 76% 18%, rgba(154, 124, 255, 0.26), transparent 28%),
+    radial-gradient(circle at 86% 68%, rgba(255, 79, 216, 0.22), transparent 32%),
+    linear-gradient(105deg, #000 0%, #000 38%, #020006 68%, #000 100%);
   background-size: 92px 92px, 92px 92px, auto, auto, auto, auto;
   background-attachment: fixed;
   color: var(--ink);
@@ -50,9 +50,9 @@ body::before {
   pointer-events: none;
   content: "";
   background-image:
-    repeating-linear-gradient(135deg, rgba(0, 229, 255, 0.11) 0 1px, transparent 1px 10px),
-    repeating-linear-gradient(105deg, rgba(255, 79, 216, 0.06) 0 1px, transparent 1px 18px);
-  opacity: 0.92;
+    repeating-linear-gradient(135deg, rgba(0, 229, 255, 0.17) 0 1px, transparent 1px 10px),
+    repeating-linear-gradient(105deg, rgba(255, 79, 216, 0.1) 0 1px, transparent 1px 18px);
+  opacity: 1;
   animation: gridDrift 18s linear infinite;
 }
 
@@ -63,10 +63,10 @@ body::after {
   pointer-events: none;
   content: "";
   background:
-    radial-gradient(circle at 18% 26%, rgba(0, 229, 255, 0.12), transparent 20%),
-    radial-gradient(circle at 82% 34%, rgba(255, 79, 216, 0.12), transparent 24%),
-    linear-gradient(90deg, rgba(0, 1, 4, 0.76), rgba(0, 1, 5, 0.42) 48%, rgba(2, 0, 8, 0.76)),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.1), transparent 35%, rgba(0, 0, 0, 0.18));
+    radial-gradient(circle at 18% 26%, rgba(0, 229, 255, 0.2), transparent 22%),
+    radial-gradient(circle at 82% 34%, rgba(255, 79, 216, 0.2), transparent 26%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.34) 48%, rgba(0, 0, 0, 0.72)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08), transparent 35%, rgba(0, 0, 0, 0.16));
   animation: ambientPulse 8s ease-in-out infinite alternate;
 }
 
