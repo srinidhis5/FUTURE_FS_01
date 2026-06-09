@@ -81,7 +81,21 @@
         <div class="about-layout">
           <figure class="about-portrait" aria-label="Cartoon developer avatar">
             <svg class="about-avatar-svg" viewBox="0 0 360 360" role="img" aria-label="Cartoon girl working on a laptop">
-              <rect width="360" height="360" rx="24" fill="#f0806f" />
+              <defs>
+                <linearGradient id="avatarBg" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#071827" />
+                  <stop offset="0.55" stop-color="#17142d" />
+                  <stop offset="1" stop-color="#0b1020" />
+                </linearGradient>
+                <radialGradient id="avatarGlow" cx="50%" cy="38%" r="62%">
+                  <stop offset="0" stop-color="#00e5ff" stop-opacity="0.25" />
+                  <stop offset="0.55" stop-color="#ff4fd8" stop-opacity="0.12" />
+                  <stop offset="1" stop-color="#050914" stop-opacity="0" />
+                </radialGradient>
+              </defs>
+              <rect width="360" height="360" rx="24" fill="url(#avatarBg)" />
+              <rect width="360" height="360" rx="24" fill="url(#avatarGlow)" />
+              <path d="M0 92h360M0 180h360M0 268h360M92 0v360M180 0v360M268 0v360" stroke="#5df2ff" stroke-opacity=".08" stroke-width="2" />
               <path d="M95 232c-8-73 12-142 86-154 70-11 111 42 111 127 0 58-31 92-98 92-61 0-92-21-99-65Z" fill="#222" stroke="#070707" stroke-width="7" />
               <path d="M132 167c0-55 31-86 74-86 45 0 75 35 75 91 0 58-31 92-76 92-43 0-73-38-73-97Z" fill="#ffd3b2" stroke="#080808" stroke-width="6" />
               <path d="M127 172c-12-2-22 8-20 25 2 15 12 24 25 19m148-44c12-2 22 8 20 25-2 15-12 24-25 19" fill="#ffd3b2" stroke="#080808" stroke-width="6" stroke-linecap="round" />
@@ -96,10 +110,11 @@
               <circle cx="239" cy="169" r="3" fill="#fff" />
               <path d="M178 217c14 15 39 15 54 0" fill="none" stroke="#080808" stroke-width="6" stroke-linecap="round" />
               <path d="M188 223c9 9 27 9 36 0v14c-12 10-28 8-36 0v-14Z" fill="#ff6f8f" stroke="#080808" stroke-width="5" />
-              <path d="M128 279c17-36 126-37 145 0v49H128v-49Z" fill="#fff" stroke="#080808" stroke-width="6" />
-              <path d="M141 294h120M145 316h112M177 278v52M222 278v52" stroke="#080808" stroke-width="4" opacity=".75" />
-              <path d="M64 224h165l24 92H89L64 224Z" fill="#303030" stroke="#080808" stroke-width="7" stroke-linejoin="round" />
-              <path d="M89 316h176v18H97l-8-18Z" fill="#191919" stroke="#080808" stroke-width="7" stroke-linejoin="round" />
+              <path d="M128 279c17-36 126-37 145 0v49H128v-49Z" fill="#dffbff" stroke="#080808" stroke-width="6" />
+              <path d="M141 294h120M145 316h112M177 278v52M222 278v52" stroke="#10202d" stroke-width="4" opacity=".75" />
+              <path d="M64 224h165l24 92H89L64 224Z" fill="#12202d" stroke="#080808" stroke-width="7" stroke-linejoin="round" />
+              <path d="M84 233h139l17 66H101L84 233Z" fill="#00e5ff" opacity=".08" />
+              <path d="M89 316h176v18H97l-8-18Z" fill="#071019" stroke="#080808" stroke-width="7" stroke-linejoin="round" />
               <path d="M239 262c24 4 36 16 34 36" fill="none" stroke="#ffd3b2" stroke-width="14" stroke-linecap="round" />
             </svg>
           </figure>
