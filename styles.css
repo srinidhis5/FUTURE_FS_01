@@ -4,7 +4,7 @@
   --muted: #90a4b8;
   --paper: #071019;
   --paper-deep: #0c1424;
-  --surface: rgba(12, 24, 38, 0.78);
+  --surface: rgba(7, 16, 28, 0.42);
   --surface-solid: #101d2b;
   --line: rgba(127, 232, 255, 0.16);
   --accent: #192e30;
@@ -157,9 +157,12 @@ body.cursor-hover .cursor-ring {
   justify-content: space-between;
   gap: 24px;
   padding: 16px clamp(20px, 5vw, 72px);
-  background: rgba(7, 16, 25, 0.74);
-  border-bottom: 1px solid rgba(127, 232, 255, 0.14);
-  backdrop-filter: blur(22px) saturate(140%);
+  background:
+    linear-gradient(135deg, rgba(0, 229, 255, 0.08), rgba(255, 79, 216, 0.05)),
+    rgba(0, 5, 12, 0.42);
+  border-bottom: 1px solid rgba(127, 232, 255, 0.24);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(24px) saturate(170%);
 }
 
 .brand {
@@ -583,11 +586,11 @@ h1 {
   border-radius: 8px;
   padding: clamp(24px, 4vw, 42px);
   background:
-    linear-gradient(135deg, rgba(0, 229, 255, 0.08), transparent 32%),
-    linear-gradient(315deg, rgba(255, 79, 216, 0.07), transparent 38%),
-    rgba(12, 24, 38, 0.72);
+    linear-gradient(135deg, rgba(0, 229, 255, 0.1), transparent 32%),
+    linear-gradient(315deg, rgba(255, 79, 216, 0.08), transparent 38%),
+    rgba(3, 10, 18, 0.42);
   box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(22px) saturate(165%);
 }
 
 .about-copy p {
@@ -617,19 +620,20 @@ h1 {
 .timeline-item,
 .contact-card,
 .contact-form {
-  border: 1px solid rgba(127, 232, 255, 0.15);
+  border: 1px solid rgba(127, 232, 255, 0.22);
   border-radius: 8px;
   background: var(--surface);
   box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(22px) saturate(165%);
 }
 
 .project-card,
 .skill-group {
   border: 2px solid transparent;
   background:
-    linear-gradient(rgba(5, 10, 18, 0.94), rgba(7, 10, 22, 0.94)) padding-box,
-    linear-gradient(135deg, #00e5ff 0%, #5df2ff 24%, #ff4fd8 52%, #9a7cff 76%, #00e5ff 100%) border-box;
+    linear-gradient(rgba(4, 10, 18, 0.48), rgba(7, 10, 22, 0.46)) padding-box,
+    linear-gradient(135deg, #00e5ff, #35ffb8, #5df2ff, #9a7cff, #ff4fd8, #00e5ff) border-box;
+  background-size: 100% 100%, 260% 260%;
   box-shadow:
     0 18px 48px rgba(0, 0, 0, 0.5),
     0 0 26px rgba(0, 229, 255, 0.16),
@@ -806,8 +810,16 @@ h1 {
 
 .project-card:hover {
   border-color: transparent;
-  box-shadow: var(--shadow);
+  background:
+    linear-gradient(rgba(4, 10, 18, 0.4), rgba(7, 10, 22, 0.38)) padding-box,
+    linear-gradient(120deg, #00e5ff, #35ffb8, #5df2ff, #9a7cff, #ff4fd8, #00e5ff) border-box;
+  background-size: 100% 100%, 320% 320%;
+  box-shadow:
+    var(--shadow),
+    0 0 28px rgba(0, 229, 255, 0.28),
+    0 0 34px rgba(255, 79, 216, 0.18);
   transform: translateY(-5px);
+  animation: rainbowBorder 1.7s linear infinite;
 }
 
 .project-card:hover::before {
@@ -896,8 +908,16 @@ h1 {
 }
 
 .skill-group:hover {
-  box-shadow: var(--shadow);
+  background:
+    linear-gradient(rgba(4, 10, 18, 0.4), rgba(7, 10, 22, 0.38)) padding-box,
+    linear-gradient(120deg, #00e5ff, #35ffb8, #5df2ff, #9a7cff, #ff4fd8, #00e5ff) border-box;
+  background-size: 100% 100%, 320% 320%;
+  box-shadow:
+    var(--shadow),
+    0 0 28px rgba(0, 229, 255, 0.26),
+    0 0 34px rgba(255, 79, 216, 0.18);
   transform: translateY(-4px);
+  animation: rainbowBorder 1.7s linear infinite;
 }
 
 .skill-group:hover::before {
@@ -1231,6 +1251,16 @@ textarea:focus {
   }
 }
 
+@keyframes rainbowBorder {
+  from {
+    background-position: 0 0, 0% 50%;
+  }
+
+  to {
+    background-position: 0 0, 100% 50%;
+  }
+}
+
 @keyframes trailFade {
   from {
     opacity: 0.8;
@@ -1298,8 +1328,11 @@ textarea:focus {
     gap: 0;
     border: 1px solid rgba(127, 232, 255, 0.18);
     border-radius: 8px;
-    background: rgba(8, 18, 30, 0.96);
+    background:
+      linear-gradient(135deg, rgba(0, 229, 255, 0.08), rgba(255, 79, 216, 0.06)),
+      rgba(0, 5, 12, 0.58);
     box-shadow: var(--shadow);
+    backdrop-filter: blur(24px) saturate(170%);
   }
 
   .site-nav.is-open {
