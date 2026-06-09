@@ -59,10 +59,29 @@ const revealObserver = new IntersectionObserver(
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
-resumeDownload.addEventListener("click", (event) => {
+resumeDownload.addEventListener("click", async (event) => {
   event.preventDefault();
   const resumeUrl = resumeDownload.getAttribute("href");
-  window.open(resumeUrl, "_blank", "noopener");
+
+  try {
+    const response = await fetch(resumeUrl);
+    if (!response.ok) {
+      throw new Error("Resume file could not be loaded.");
+    }
+
+    const resumeBlob = await response.blob();
+    const downloadUrl = URL.createObjectURL(resumeBlob);
+    const downloadLink = document.createElement("a");
+
+    downloadLink.href = downloadUrl;
+    downloadLink.download = "Srinidhi_Sridhar_Resume.pdf";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    downloadLink.remove();
+    URL.revokeObjectURL(downloadUrl);
+  } catch (error) {
+    window.location.href = resumeUrl;
+  }
 });
 
 let cursorX = 0;
