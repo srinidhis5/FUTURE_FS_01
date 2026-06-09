@@ -4,7 +4,7 @@
   --muted: #90a4b8;
   --paper: #071019;
   --paper-deep: #0c1424;
-  --surface: rgba(7, 16, 28, 0.42);
+  --surface: rgba(3, 12, 28, 0.66);
   --surface-solid: #101d2b;
   --line: rgba(127, 232, 255, 0.16);
   --accent: #192e30;
@@ -420,12 +420,14 @@ h1 {
 }
 
 .hero-contact a {
-  border: 1px solid rgba(127, 232, 255, 0.18);
+  border: 1px solid rgba(127, 232, 255, 0.24);
   border-radius: 8px;
   padding: 9px 12px;
-  background: rgba(12, 24, 38, 0.64);
+  background:
+    linear-gradient(135deg, rgba(0, 229, 255, 0.08), rgba(154, 124, 255, 0.06)),
+    rgba(1, 8, 22, 0.74);
   color: var(--ink-soft);
-  box-shadow: 0 0 18px rgba(0, 229, 255, 0.08);
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.04);
   font-size: 0.92rem;
   font-weight: 750;
   transition: color 160ms ease, border-color 160ms ease, transform 160ms ease;
@@ -456,14 +458,25 @@ h1 {
   justify-content: center;
   min-height: 48px;
   padding: 12px 19px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(127, 232, 255, 0.26);
   border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(0, 229, 255, 0.1), rgba(154, 124, 255, 0.08), rgba(255, 79, 216, 0.05)),
+    rgba(1, 8, 22, 0.76);
+  color: var(--ink);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.32), 0 0 22px rgba(0, 229, 255, 0.12);
+  backdrop-filter: blur(18px) saturate(160%);
   font-weight: 850;
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
 .button:hover {
   transform: translateY(-2px);
+  border-color: rgba(93, 242, 255, 0.48);
+  background:
+    linear-gradient(135deg, rgba(0, 229, 255, 0.14), rgba(154, 124, 255, 0.1), rgba(255, 79, 216, 0.08)),
+    rgba(1, 8, 22, 0.82);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.38), 0 0 26px rgba(0, 229, 255, 0.2);
 }
 
 .button:active {
@@ -471,16 +484,11 @@ h1 {
 }
 
 .button.primary {
-  background: linear-gradient(135deg, #00e5ff, #8b5cff);
-  color: #041018;
-  box-shadow: 0 0 24px rgba(0, 229, 255, 0.24), 0 16px 30px rgba(0, 0, 0, 0.26);
+  border-color: rgba(93, 242, 255, 0.34);
 }
 
 .button.secondary {
-  border-color: rgba(0, 229, 255, 0.2);
-  background: rgba(12, 24, 38, 0.76);
-  color: var(--ink);
-  box-shadow: var(--shadow-soft);
+  border-color: rgba(154, 124, 255, 0.28);
 }
 
 .section {
@@ -631,7 +639,7 @@ h1 {
 .skill-group {
   border: 2px solid transparent;
   background:
-    linear-gradient(rgba(4, 10, 18, 0.48), rgba(7, 10, 22, 0.46)) padding-box,
+    linear-gradient(rgba(2, 9, 22, 0.74), rgba(4, 10, 25, 0.7)) padding-box,
     linear-gradient(135deg, #00e5ff, #35ffb8, #5df2ff, #9a7cff, #ff4fd8, #00e5ff) border-box;
   background-size: 100% 100%, 260% 260%;
   box-shadow:
@@ -811,7 +819,7 @@ h1 {
 .project-card:hover {
   border-color: transparent;
   background:
-    linear-gradient(rgba(4, 10, 18, 0.4), rgba(7, 10, 22, 0.38)) padding-box,
+    linear-gradient(rgba(2, 9, 22, 0.66), rgba(4, 10, 25, 0.62)) padding-box,
     linear-gradient(120deg, #00e5ff, #35ffb8, #5df2ff, #9a7cff, #ff4fd8, #00e5ff) border-box;
   background-size: 100% 100%, 320% 320%;
   box-shadow:
@@ -895,6 +903,9 @@ h1 {
   min-height: 146px;
   padding: 22px;
   overflow: hidden;
+  background:
+    linear-gradient(rgba(1, 7, 20, 0.8), rgba(3, 9, 24, 0.76)) padding-box,
+    linear-gradient(135deg, #00e5ff, #35ffb8, #5df2ff, #9a7cff, #ff4fd8, #00e5ff) border-box;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
@@ -909,7 +920,7 @@ h1 {
 
 .skill-group:hover {
   background:
-    linear-gradient(rgba(4, 10, 18, 0.4), rgba(7, 10, 22, 0.38)) padding-box,
+    linear-gradient(rgba(2, 9, 22, 0.66), rgba(4, 10, 25, 0.62)) padding-box,
     linear-gradient(120deg, #00e5ff, #35ffb8, #5df2ff, #9a7cff, #ff4fd8, #00e5ff) border-box;
   background-size: 100% 100%, 320% 320%;
   box-shadow:
