@@ -29,9 +29,9 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    linear-gradient(rgba(0, 229, 255, 0.32) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 255, 0.32) 1px, transparent 1px),
-    radial-gradient(circle at 16% 24%, rgba(0, 229, 255, 0.26), transparent 24%),
+    linear-gradient(rgba(14, 37, 40, 0.32) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 47, 49, 0.32) 1px, transparent 1px),
+    radial-gradient(circle at 16% 24%, rgba(23, 47, 50, 0.26), transparent 24%),
     radial-gradient(circle at 76% 18%, rgba(154, 124, 255, 0.26), transparent 28%),
     radial-gradient(circle at 86% 68%, rgba(255, 79, 216, 0.22), transparent 32%),
     linear-gradient(105deg, #000 0%, #000 38%, #020006 68%, #000 100%);
@@ -666,7 +666,7 @@ h1 {
   border-radius: 8px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 20% 20%, rgba(0, 229, 255, 0.28), transparent 26%),
+    radial-gradient(circle at 20% 20%, rgba(27, 22, 43, 0.28), transparent 26%),
     radial-gradient(circle at 78% 28%, rgba(255, 79, 216, 0.24), transparent 28%),
     radial-gradient(circle at 50% 92%, rgba(247, 211, 93, 0.2), transparent 32%),
     linear-gradient(135deg, rgba(0, 229, 255, 0.18), rgba(255, 79, 216, 0.12)),
@@ -682,14 +682,14 @@ h1 {
     linear-gradient(rgba(127, 232, 255, 0.08) 1px, transparent 1px),
     linear-gradient(90deg, rgba(127, 232, 255, 0.08) 1px, transparent 1px);
   background-size: 22px 22px;
-  opacity: 0.68;
+  opacity: 0.1;
 }
 
 .roomflow-visual span {
   position: absolute;
   border: 1px solid rgba(93, 242, 255, 0.7);
   border-radius: 6px;
-  background: linear-gradient(135deg, rgba(0, 229, 255, 0.22), rgba(154, 124, 255, 0.18));
+  background: linear-gradient(135deg, rgba(15, 29, 31, 0.22), rgba(154, 124, 255, 0.18));
   box-shadow: 0 0 22px rgba(0, 229, 255, 0.26);
 }
 
@@ -726,7 +726,7 @@ h1 {
   height: 2px;
   content: "";
   background: linear-gradient(90deg, var(--accent), var(--coral));
-  box-shadow: 0 0 16px rgba(0, 229, 255, 0.5);
+  box-shadow: 0 0 16px rgba(16, 21, 21, 0.5);
   transform: rotate(-14deg);
 }
 
@@ -802,7 +802,7 @@ h1 {
 .pujaseva-visual::after {
   position: absolute;
   inset: 42px 54px;
-  border: 1px solid rgba(93, 242, 255, 0.35);
+  border: 1px solid rgba(20, 36, 38, 0.35);
   border-radius: 50%;
   content: "";
 }
